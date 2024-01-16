@@ -1,12 +1,6 @@
 public class ArrayOps {
     public static void main(String[] args) {
-        int[] x = new int[]{3, 0, 1};
-
-        System.out.println(secondMaxValue(x));
-        System.out.println(secondMaxValue(new int[] {0, 1, 2, 3, 4, 6}));
-
-        System.out.println(isSorted(x));
-        System.out.println(isSorted(new int[] {6,5,4,3,-12}));
+        
     }
     
     public static int findMissingInt (int [] array) {
@@ -29,22 +23,27 @@ public class ArrayOps {
         return false;
     }
 
+    
     public static int secondMaxValue(int [] array) {
-        int max = array[0] ;
-        int secMax = array[0];
-        for (int i = 0; i < array.length; i++) {
-        if (array[i] > max) {
-        max = array[i];
+            int max = array[0] ;
+            int secMax = array[1] ;
+        if (array[0]<=array[1]) {    
+             max = array[1] ;
+             secMax = array[0] ;
         }
-        for (int j=0; j<array.length; j++) {
-            if (array [j]< max && array [j] > secMax) {
-                secMax = array [j];
-            }
+        if (array.length>1) {  
+        for (int i = 2; i < array.length; i++) {
+        if (array[i] > max) {
+        secMax = max ;
+        max = array[i];
+        } else if (array[i]<max && array[i]>secMax) {
+            secMax = array[i];
+        }
         }
     }
-    
         return secMax;
     }
+    
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
         for (int i = 0; i<array1.length; i++) {
