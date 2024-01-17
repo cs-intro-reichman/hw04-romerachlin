@@ -23,7 +23,7 @@ public class StringOps {
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
         int array[] = allIndexOf("Hello world", 'l');
-        System.out.println(array);
+        System.out.println(array[2]);
 
     }
 
