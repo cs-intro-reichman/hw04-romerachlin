@@ -22,9 +22,10 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        int array[] = allIndexOf("Hello world", 'l');
-        System.out.println(array[2]);
-
+        int array[] = allIndexOf("Hello worLd", 'o');
+        for(int i=0 ; i<array.length ; i++){
+        System.out.println(array[i]);
+        }
     }
 
     public static String capVowelsLowRest (String string) {
@@ -55,14 +56,14 @@ public class StringOps {
             count++;
         }
         }
-        int[] indexChar = new int [count];
+        int[] indexArray = new int [count];
         int index = 0;
         for(int j=0 ; j<string.length(); j++){
             if (string.charAt(j) == chr) {
-                indexChar[index]=j;
+                indexArray[index]=j;
                 index++;
             }
-    }
-    return indexChar;
+        }
+    return indexArray;
 }
 }
