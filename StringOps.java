@@ -32,8 +32,10 @@ public class StringOps {
         char ch = string.charAt(i);
         if (string.charAt(i) == 'a' || string.charAt(i) == 'e' || string.charAt(i) == 'i'|| string.charAt(i) == 'o'|| string.charAt(i) == 'u') {
             ch = (char) (string.charAt(i) - 32);
-        } else if (string.charAt(i) <='Z' && string.charAt(i)>'A' ) {
+        } else if ((string.charAt(i)>'A' && string.charAt(i) <'E') || (string.charAt(i)>'E' && string.charAt(i) <'I') || (string.charAt(i)>'I' && string.charAt(i) <'O') || (string.charAt(i)>'O' && string.charAt(i) <'U')|| (string.charAt(i)>'U' && string.charAt(i) <'`')) {
             ch = (char) (string.charAt(i) + 32);
+        }else if (string.charAt(i)>=' ' && string.charAt(i)<'A' || string.charAt(i) == '`') {
+            ch = (char) (string.charAt(i));
         }
         capVowelsLowRest += (char) (ch);
        }
