@@ -68,6 +68,7 @@ public class StringOps {
             if (string.charAt(j) == chr) {
                 indexArray[index]=j;
                 index++;
+                
             }
         }
     return indexArray;
