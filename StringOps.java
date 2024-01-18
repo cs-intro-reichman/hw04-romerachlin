@@ -55,27 +55,21 @@ public class StringOps {
         return "";
     }
 
-   public static int[] allIndexOf(String string, char chr) {
-    int count = 0;
-
-    // Count occurrences
-    for (int i = 0; i < string.length(); i++) {
-        if (string.charAt(i) == chr) {
+    public static int[] allIndexOf (String string, char chr) {
+        int count = 0;
+        for(int i=0 ; i<string.length() ; i++){
+            if (string.charAt(i) == chr) {
             count++;
         }
-    }
-
-    // Create array to store indices
-    int[] indexArray = new int[count];
-    int index = 0;
-
-    // Populate array with indices
-    for (int j = 0; j < string.length(); j++) {
-        if (string.charAt(j) == chr) {
-            indexArray[index++] = j;
         }
-    }
-
+        int[] indexArray = new int [count];
+        int index = 0;
+        for(int j=0 ; j<string.length(); j++){
+            if (string.charAt(j) == chr) {
+                indexArray[index]=j;
+                index++;
+            }
+        }
     return indexArray;
 }
 
