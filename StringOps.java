@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class StringOps {
     ////////////////////////////////////////////////////////////
     //////                                               ///////
@@ -24,8 +26,9 @@ public class StringOps {
     public static void main(String[] args) {
         int array[] = allIndexOf("Hello world", 'l');
         for(int i=0 ; i<array.length ; i++){
-        System.out.println(array[i]);
+        
         }
+        System.out.println(Arrays.toString(array));
     }
 
     public static String capVowelsLowRest (String string) {
