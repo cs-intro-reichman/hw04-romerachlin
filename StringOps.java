@@ -25,10 +25,13 @@ public class StringOps {
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
         int array[] = allIndexOf("Hello world", 'l');
-        for(int i=0 ; i<array.length ; i++){
-        
-        }
+        int array1[] = allIndexOf("Hello world", 'o');
+        int array2[] = allIndexOf("Hello world", ' ');
+        int array3[] = allIndexOf("MMMM", 'M');
         System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
+        System.out.println(Arrays.toString(array3));
     }
 
     public static String capVowelsLowRest (String string) {
