@@ -51,9 +51,39 @@ public class StringOps {
     }
 
     public static String camelCase (String string) {
-        // Write your code here:
-        return "";
+        String s = "";
+     int k = 0;
+     while((string.charAt(k)) == ' '){
+     k++;
+     }
+     if(string.charAt(k) >= 'A' && string.charAt(k) <= 'Z'){  
+        s = s + ((char)((string.charAt(k)) + 32));
+    }else{
+        s = s + (string.charAt(k));
     }
+     for( int i = k + 1; i <= (string.length() - 1);i++){
+        if(((string.charAt(i))) != ' '){
+            if(string.charAt(i-1) == ' '){
+                if(string.charAt(i) >= 'A' && string.charAt(i) <= 'Z'){
+                    s = s + (string.charAt(i));
+                }else{
+                    s = s + ((char)((string.charAt(i)) - 32));
+                }
+            }else{
+                if(string.charAt(i) >= 'A' && string.charAt(i) <= 'Z'){  
+                    s = s + ((char)((string.charAt(i)) + 32));
+                }else{
+                    s = s + (string.charAt(i));
+                }
+
+                  
+            }
+        }
+     }
+    
+    return s;
+
+ }
 
     public static int[] allIndexOf (String string, char chr) {
         int count = 0;
